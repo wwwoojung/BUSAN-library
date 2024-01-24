@@ -1,0 +1,99 @@
+:root {
+    --background-color: #f9f9f9;
+    --white-color: #ffffff;
+    --black-color: #202123;
+    --gray-color: #eeeeee;
+    --primary-color: #123A6E;
+    --secondary-color: #F1F7FE;
+    --third-color: #66C6F0;
+    --line: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+* {
+    outline: 1px solid tomato;
+}
+
+.wrap {
+    min-width: 320px;
+}
+
+#Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1440px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    line-height: 100px;
+}
+
+.header_wrap .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header_wrap .gnb>ul>li>a {
+    display: block;
+
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-color);
+    white-space: nowrap;
+}
+
+.header_wrap .util>ul {
+    display: flex;
+    gap: 15px;
+}
+
+.header_wrap .util>ul>li>a {
+    display: block;
+
+    font-size: 14px;
+    color: var(--white-color);
+    white-space: nowrap;
+}
+
+
+
+
+
+.section {
+    height: 100vh;
+}
+
+.MainVisual {
+    background: url(../images/main_visual_bg.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .visual_con {
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainVisual .slogan p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0 0 6px 0;
+}
+
+.MainVisual .slogan strong {
+    display: block;
+    font-size: 72px;
+    font-weight: 700;
+    text-indent: -4px;
+}
+
+.MainVisual #search {
+    display: flex;
+}
