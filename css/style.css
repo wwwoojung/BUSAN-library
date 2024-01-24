@@ -2,16 +2,16 @@
     --background-color: #f9f9f9;
     --white-color: #ffffff;
     --black-color: #202123;
-    --gray-color: #eeeeee;
+    --gray-color: #d9d9d9;
     --primary-color: #123A6E;
     --secondary-color: #F1F7FE;
     --third-color: #66C6F0;
     --line: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-* {
+/* * {
     outline: 1px solid tomato;
-}
+} */
 
 .wrap {
     min-width: 320px;
@@ -23,6 +23,11 @@
     left: 0;
     right: 0;
     z-index: 999;
+}
+
+#Header.on {
+    background: var(--white-color);
+    border-bottom: var(--line);
 }
 
 .header_wrap {
@@ -50,6 +55,10 @@
     white-space: nowrap;
 }
 
+#Header.on .gnb>ul>li>a {
+    color: var(--black-color);
+}
+
 .header_wrap .util>ul {
     display: flex;
     gap: 15px;
@@ -61,6 +70,10 @@
     font-size: 14px;
     color: var(--white-color);
     white-space: nowrap;
+}
+
+#Header.on .util>ul>li>a {
+    color: var(--black-color);
 }
 
 
@@ -96,4 +109,199 @@
 
 .MainVisual #search {
     display: flex;
+}
+
+
+
+
+
+.MainNotice .title {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    margin: 0 auto 80px auto;
+}
+
+.MainNotice .tab_menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.MainNotice .tab_menu>li>a {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gray-color);
+}
+
+.MainNotice .tab_menu>li.on>a {
+    color: var(--black-color);
+}
+
+.MainNotice .tab_menu>li .feather {
+    visibility: hidden;
+    vertical-align: -5px;
+}
+
+.MainNotice .tab_menu>li.on .feather {
+    visibility: visible;
+}
+
+.MainNotice .main_notice .tab_content {
+    margin: 0 0 80px 0;
+}
+
+.MainNotice .main_notice .main_notice_slide {
+    height: 0;
+    visibility: hidden;
+}
+
+.MainNotice .main_notice .main_notice_slide.on {
+    height: 100%;
+    visibility: visible;
+}
+
+.MainNotice .main_notice_slide .itm {
+    /* height: 80%; */
+    padding: 40px 32px;
+
+    border: var(--line);
+    border-radius: 16px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+}
+
+.MainNotice .main_notice_slide .itm span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+}
+
+.MainNotice .main_notice_slide .itm strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 0 24px 0;
+    margin: 0 0 24px 0;
+
+    border-bottom: var(--line);
+
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;
+}
+
+.MainNotice .main_notice_slide .itm p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 32px 0;
+
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;
+}
+
+.MainNotice .main_notice .user_menu {
+    display: flex;
+    gap: 30px;
+}
+
+.MainNotice .main_notice .user_menu>li {
+    flex: 1;
+}
+
+.MainNotice .main_notice .user_menu>li>a {
+    position: relative;
+    display: block;
+    background: var(--secondary-color);
+    padding: 24px 32px;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.MainNotice .main_notice .user_menu>li>a .feather {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translate(0, -50%);
+}
+
+
+
+
+
+
+.MainCategory .title {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    margin: 0 auto 64px auto;
+}
+
+.MainCategory .tab_menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    /* margin: 0 auto 0 0; */
+}
+
+.MainCategory .tab_menu>li>a {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gray-color);
+}
+
+.MainCategory .tab_menu>li.on>a {
+    color: var(--black-color);
+}
+
+.MainCategory .tab_menu>li .feather {
+    visibility: hidden;
+    vertical-align: -5px;
+}
+
+.MainCategory .tab_menu>li.on .feather {
+    visibility: visible;
+}
+
+.MainCategory .tab_content .con {
+    display: flex;
+    gap: 30px;
+}
+
+.MainCategory .tab_content .con>* {
+    flex: 1;
+}
+
+.MainCategory .tab_content .con .itm {
+    text-align: center;
+}
+
+.MainCategory .tab_content .con .itm figure {
+    border: var(--line);
+    height: 470px;
+
+    margin: 0 0 16px 0;
+}
+
+.MainCategory .tab_content .con .itm img {
+    width: 100%;
+    height: 100%;
+}
+
+.MainCategory .tab_content .con .itm strong {
+    font-size: 20px;
+    font-weight: 600;
 }
