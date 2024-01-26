@@ -8,14 +8,14 @@ $(function () {
         onLeave: function (anchorLink, index) {
             if (index.index == 0) {
                 $('#Header').removeClass('on');
-                document.getElementById("H_logo").src = "../images/logo_wh.png";
+                document.getElementById("H_logo").src = "./images/logo_wh.png";
             } else {
                 $('#Header').addClass('on');
                 if ($('#Header').hasClass('m_active')) {
-                    document.getElementById("H_logo").src = "../images/logo_wh.png";
+                    document.getElementById("H_logo").src = "./images/logo_wh.png";
 
                 } else {
-                    document.getElementById("H_logo").src = "../images/logo_bk.png";
+                    document.getElementById("H_logo").src = "./images/logo_bk.png";
                 }
             }
         },
