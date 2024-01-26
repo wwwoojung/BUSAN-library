@@ -530,6 +530,7 @@
     font-size: 18px;
     font-weight: 600;
     white-space: nowrap;
+    color: var(--gray-color);
 }
 
 .MainNotice .main_notice .user_menu>li>a .feather {
