@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="./css/fullpage.min.css">
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/jquery.fullpage.min.js"></script>
+    <script src="./js/fullpage.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="./js/custom.js"></script>
 </head>
@@ -50,10 +50,13 @@
                         <li><a href="">통합회원인증</a></li>
                     </ul>
                 </div>
+                <button class="mopen">
+                    <i data-feather="menu"></i>
+                </button>
             </div>
         </header>
         <main id="content" class="main">
-            <section class="MainVisual section">
+            <section class="MainVisual section fp-auto-height-responsive">
                 <h2 class="blind">main visual</h2>
                 <div class="inner visual_con">
                     <div class="slogan">
@@ -73,11 +76,10 @@
                     </form>
                 </div>
                 <div class="scroll">
-                    <i data-feather="arrow-down"></i>
                     <span>scroll down</span>
                 </div>
             </section>
-            <section class="MainNotice section">
+            <section class="MainNotice section fp-auto-height-responsive">
                 <div class="title">
                     <h2>도서관 소식</h2>
                     <ul class="tab_menu">
@@ -314,7 +316,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="MainCategory section">
+            <section class="MainCategory section fp-auto-height-responsive">
                 <div class="title">
                     <h2>BOOKS</h2>
                     <ul class="tab_menu">
@@ -442,11 +444,12 @@
                     </div>
                 </div>
             </section>
-            <section class="MainCuration section">
+            <section class="MainCuration section fp-auto-height-responsive">
                 <div class="title_area">
                     <div class="title">
                         <h2>CURATION</h2>
                         <p>다양한 카테고리와 컨텐츠를 제공해 드리는맞춤형 서비스</p>
+                        <div class="more_btn">더 알아보기</div>
                     </div>
                 </div>
                 <div class="content_area">
@@ -504,7 +507,7 @@
                     </div>
                 </div>
             </section>
-            <section class="MainContent section">
+            <section class="MainContent section fp-auto-height-responsive">
                 <h2 class="blind">online content and book culture</h2>
                 <div class="top_content">
                     <div class="word_animation">

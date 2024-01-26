@@ -2,23 +2,38 @@ $(function () {
     feather.replace();
 
     $('#content').fullpage({
-
+        scrollOverflow: false,
+        responsiveWidth: 1200,
+        navigation: true,
         onLeave: function (anchorLink, index) {
-            console.log(index);
-            if (index == 1) {
+            if (index.index == 0) {
                 $('#Header').removeClass('on');
                 document.getElementById("H_logo").src = "../images/logo_wh.png";
             } else {
                 $('#Header').addClass('on');
-                document.getElementById("H_logo").src = "../images/logo_bk.png";
+                if ($('#Header').hasClass('m_active')) {
+                    document.getElementById("H_logo").src = "../images/logo_wh.png";
+
+                } else {
+                    document.getElementById("H_logo").src = "../images/logo_bk.png";
+                }
             }
         },
     });
 
+    $('#Header .mopen').on('click', function () {
+        $('#Header').toggleClass('m_active');
+    })
+
+    $('#Header').on('wheel touchmove', function (e) {
+        if ($('#Header').hasClass('m_active')) {
+            e.preventDefault();
+        }
+    })
+
     var MAIN_NOTICE_SLIDE = new Swiper('.MainNotice .main_notice_slide', {
         loop: true,
         spaceBetween: 30,
-        slidesPerView: 3,
         pagination: {
             el: ".swiper-pagination",
             type: "progressbar",
@@ -27,6 +42,17 @@ $(function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            }
+        }
     })
 
     $('.MainNotice .tab_menu>li>a').on('click', function (e) {
@@ -53,6 +79,7 @@ $(function () {
 
     const ONLINE_CONTENT_SLIDE = new Swiper('.MainContent .online_content_slide', {
         loop: true,
+        effect: 'fade',
         pagination: {
             el: ".swiper-pagination",
             type: "fraction",

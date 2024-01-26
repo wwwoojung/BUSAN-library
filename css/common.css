@@ -2,10 +2,12 @@
     max-width: 1440px;
     padding: 0 15px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .title {
     max-width: 1440px;
+    width: 100%;
     margin: 0 auto 32px auto;
     padding: 0 15px;
 
@@ -49,7 +51,7 @@
 
     border: 1px solid #123A6E;
 
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
 
     cursor: pointer;
