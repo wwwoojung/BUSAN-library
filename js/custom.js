@@ -31,16 +31,12 @@ $(function () {
         }
     })
 
-    var MAIN_NOTICE_SLIDE = new Swiper('.MainNotice .main_notice_slide', {
+    const MAIN_NOTICE_SLIDE = new Swiper('.MainNotice .main_notice_slide.on', {
         loop: true,
         spaceBetween: 30,
         pagination: {
             el: ".swiper-pagination",
             type: "progressbar",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
         },
         breakpoints: {
             320: {
@@ -55,6 +51,14 @@ $(function () {
         }
     })
 
+    $('.MainNotice .slide_arrows .left').on('click', function () {
+        MAIN_NOTICE_SLIDE.slidePrev();
+    })
+    $('.MainNotice .slide_arrows .right').on('click', function () {
+        MAIN_NOTICE_SLIDE.slideNext();
+    })
+
+
     $('.MainNotice .tab_menu>li>a').on('click', function (e) {
         e.preventDefault();
         const IDX = $(this).parent().index();
@@ -64,7 +68,36 @@ $(function () {
 
         $('.MainNotice .main_notice .main_notice_slide').removeClass('on');
         $('.MainNotice .main_notice .main_notice_slide').eq(IDX).addClass('on');
+
+        const MAIN_NOTICE_SLIDE = new Swiper('.MainNotice .main_notice_slide.on', {
+            loop: true,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                }
+            }
+        })
+
+        $('.MainNotice .slide_arrows .left').on('click', function () {
+            MAIN_NOTICE_SLIDE.slidePrev();
+        })
+        $('.MainNotice .slide_arrows .right').on('click', function () {
+            MAIN_NOTICE_SLIDE.slideNext();
+        })
     })
+
+
 
     $('.MainCategory .tab_menu>li>a').on('click', function (e) {
         e.preventDefault();
