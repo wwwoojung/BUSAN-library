@@ -43,7 +43,7 @@
 
 .more_btn {
     display: inline-block;
-    padding: 16px 40px;
+    padding: 16px 32px;
 
     background: transparent;
     color: #123A6E;
@@ -51,7 +51,6 @@
 
     border: 1px solid #123A6E;
 
-    font-size: 14px;
     text-transform: uppercase;
 
     cursor: pointer;
@@ -63,7 +62,6 @@
     content: "\f1e1";
     font-family: 'Material Symbols Outlined';
 
-    font-size: 14px;
     margin: 0 0 0 4px;
     vertical-align: -2px;
 }
