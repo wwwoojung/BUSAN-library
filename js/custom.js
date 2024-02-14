@@ -5,8 +5,10 @@ $(function () {
         scrollOverflow: false,
         responsiveWidth: 1200,
         anchors: ['page01', 'page02', 'page03', 'page04', 'page05', 'footer'],
-        navigation: true,
         onLeave: function (anchorLink, index) {
+            $('.side_nav>ul>li').removeClass('on');
+            $('.side_nav>ul>li').eq(index.index).addClass('on');
+
             if (index.index == 0) {
                 $('#Header').removeClass('on');
                 document.getElementById("H_logo").src = "./images/logo_wh.png";
@@ -18,7 +20,18 @@ $(function () {
                 } else {
                     document.getElementById("H_logo").src = "./images/logo_bk.png";
                 }
-            }
+            };
+
+            if (index.index == 0) {
+                $('.side_nav').addClass('on')
+            } else if (index.index == 2) {
+                $('.side_nav').addClass('on')
+            } else if (index.index == 5) {
+                $('.side_nav').addClass('__on')
+            } else {
+                $('.side_nav').removeClass('on')
+                $('.side_nav').removeClass('__on')
+            };
         },
     });
 
