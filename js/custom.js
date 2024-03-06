@@ -27,16 +27,21 @@ $(function () {
             } else if (index.index == 2) {
                 $('.side_nav').addClass('on')
             } else if (index.index == 5) {
-                $('.side_nav').addClass('__on')
+                $('.side_nav').addClass('on')
             } else {
                 $('.side_nav').removeClass('on')
-                $('.side_nav').removeClass('__on')
             };
         },
     });
 
     $('#Header .mopen').on('click', function () {
         $('#Header').toggleClass('m_active');
+        if ($('#Header').hasClass('m_active')) {
+            document.getElementById("H_logo").src = "./images/logo_wh.png";
+
+        } else {
+            document.getElementById("H_logo").src = "./images/logo_bk.png";
+        }
     })
 
     $('#Header').on('wheel touchmove', function (e) {
@@ -137,18 +142,24 @@ $(function () {
                 el: ".swiper-pagination",
                 clickable: true,
             },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                },
+                600: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
 
-            // breakpoints: {
-            //     320: {
-            //         slidesPerView: 1,
-            //     },
-            //     768: {
-            //         slidesPerView: 2,
-            //     },
-            //     1200: {
-            //         slidesPerView: 3,
-            //     }
-            // }
+                },
+                1200: {
+                    slidesPerView: 5,
+                }
+            }
         })
 
         $('.MainCategory .tab_content .slide_arrows .left').on('click', function () {
@@ -168,17 +179,24 @@ $(function () {
             clickable: true,
         },
 
-        // breakpoints: {
-        //     320: {
-        //         slidesPerView: 1,
-        //     },
-        //     768: {
-        //         slidesPerView: 2,
-        //     },
-        //     1200: {
-        //         slidesPerView: 3,
-        //     }
-        // }
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
+            600: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+            768: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+
+            },
+            1200: {
+                slidesPerView: 5,
+            }
+        }
     })
 
     $('.MainCategory .tab_content .slide_arrows .left').on('click', function () {
